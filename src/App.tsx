@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LivePreview from './pages/LivePreview';
+import AiSuggestionModal from './pages/AiSuggestionModal'; // أو مسار مكان حفظ ملف الـ Modal عندك
 
 function TeamHome() {
   return (
@@ -24,6 +25,9 @@ export default function App() {
         
         {/* صفحة التصميم والـ Live Preview على الرابط: http://localhost:5173/live-preview */}
         <Route path="/live-preview" element={<LivePreview />} />
+
+        {/* مسار الـ AI Suggestion Modal على الرابط: http://localhost:5173/ai-suggestion */}
+        <Route path="/ai-suggestion" element={<AiSuggestionModal />} />
       </Routes>
     </Router>
   );
